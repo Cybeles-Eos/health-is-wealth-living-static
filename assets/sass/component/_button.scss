@@ -2,28 +2,34 @@
 @use "color" as *;
 
 .btn {
-    min-width: 150px;
+    // min-width: 150px;
     font-family: $font-primary;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     line-height: 24px;
-    padding: 10px 15px;
+    padding: 10px 25px;
+    text-transform: capitalize;
     border: 1px solid $color-primary;
-    border-radius: 50px;
+    border-radius: 8px;
+    transition: .3s;
     &--primary {
         background-color: $color-primary;
-        color: #fff;
+        color: $color-white;
+        font-weight: 500;
         &:hover {
-            background-color: initial;
-            color: $color-primary;
+            opacity: .85;
+            color: $color-white;
         }
     }
 
     &--secondary {
-        color: $color-primary;
+        color: $color-primary !important;
+        background-color: $color-white;
         &:hover {
-            background-color: $color-primary;
-            color: #fff;
+            opacity: .85;
+            color: $color-primary !important;
         }
     }
+
+
 }
