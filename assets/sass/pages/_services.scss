@@ -1,0 +1,11 @@
+@use "../component/typography" as *;
+@use "../component/color" as *;
+
+.page--services{
+   .section{
+      &--hero{
+         width: 100%;height: 33rem;
+         
+      }
+   }
+}
