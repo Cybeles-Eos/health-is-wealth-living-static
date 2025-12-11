@@ -190,21 +190,28 @@
                img{
                   width: 100%;
                }
+               @media (max-width: 692px) {
+                  display: none;
+               }
+            }
+            @media (max-width: 1092px) {
+               min-width: 300px;
             }
          }
          .pb-listing-con{
             width: 100%;
-            height: 500px;
+            // height: 500px;
             //background-color: royalblue;
-
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 1rem;
+            row-gap: 2rem;
             
             .pb-lc-box{
+               height: fit-content;
                border-radius: 12px;
-
                overflow: hidden;
+               box-shadow: 0 4px 8px rgba(109, 109, 109, 0.1);
                &__image{
                   height: 245px;
                   position: relative;
@@ -222,11 +229,17 @@
                      padding: 8px 1rem;
                      background-color: #F5FFA1;
                      color: $color-primary;
-                     font-size: 14px;
-                     border-radius: 7px;
+                     font-size: 12px;
+                     font-weight: 600;
+                     border-radius: 4px;
                   }
                }
                &__details{
+                  padding: 25px 14px; 
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+
                   h3,p{
                      color: $color-dark;
                   }
@@ -237,13 +250,33 @@
                   }
                   p{
                      line-height: 140%;
+                     display: -webkit-box;
+                     -webkit-line-clamp: 3; /* number of lines */
+                     -webkit-box-orient: vertical;
+                     overflow: hidden;
                   }
                   a{
                      color: $color-primary;
                      font-size: 14px;
+                     width: fi;
                   }
                }
             }
+            @media (max-width: 1092px) {
+               grid-template-columns: 1fr 1fr;
+            }
+            @media (max-width: 892px) {
+               grid-template-columns: 1fr;
+            }
+            @media (max-width: 692px) {
+               grid-template-columns: 1fr 1fr;
+            }
+            @media (max-width: 492px) {
+               grid-template-columns: 1fr;
+            }
+         }
+         @media (max-width: 692px) {
+            flex-direction: column;
          }
       }
    }

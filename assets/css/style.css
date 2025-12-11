@@ -1512,16 +1512,28 @@ footer .foo--bot__copyright {
 .page--blogs .section--list .pb-side-bar a img {
   width: 100%;
 }
+@media (max-width: 692px) {
+  .page--blogs .section--list .pb-side-bar a {
+    display: none;
+  }
+}
+@media (max-width: 1092px) {
+  .page--blogs .section--list .pb-side-bar {
+    min-width: 300px;
+  }
+}
 .page--blogs .section--list .pb-listing-con {
   width: 100%;
-  height: 500px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+  row-gap: 2rem;
 }
 .page--blogs .section--list .pb-listing-con .pb-lc-box {
+  height: fit-content;
   border-radius: 12px;
   overflow: hidden;
+  box-shadow: 0 4px 8px rgba(109, 109, 109, 0.1);
 }
 .page--blogs .section--list .pb-listing-con .pb-lc-box__image {
   height: 245px;
@@ -1541,8 +1553,15 @@ footer .foo--bot__copyright {
   padding: 8px 1rem;
   background-color: #F5FFA1;
   color: #8D913A;
-  font-size: 14px;
-  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+.page--blogs .section--list .pb-listing-con .pb-lc-box__details {
+  padding: 25px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .page--blogs .section--list .pb-listing-con .pb-lc-box__details h3, .page--blogs .section--list .pb-listing-con .pb-lc-box__details p {
   color: #1E1E1E;
@@ -1554,10 +1573,40 @@ footer .foo--bot__copyright {
 }
 .page--blogs .section--list .pb-listing-con .pb-lc-box__details p {
   line-height: 140%;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .page--blogs .section--list .pb-listing-con .pb-lc-box__details a {
   color: #8D913A;
   font-size: 14px;
+  width: fi;
+}
+@media (max-width: 1092px) {
+  .page--blogs .section--list .pb-listing-con {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 892px) {
+  .page--blogs .section--list .pb-listing-con {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 692px) {
+  .page--blogs .section--list .pb-listing-con {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 492px) {
+  .page--blogs .section--list .pb-listing-con {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 692px) {
+  .page--blogs .section--list {
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
